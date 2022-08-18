@@ -1,4 +1,4 @@
-const { User, Thought } = require('../models'); 
+const { User, Post } = require('../models'); 
 const { AuthenticationError } = require('apollo-server-express'); 
 const { signToken } = require('../utils/auth');
 
@@ -8,7 +8,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
-          .populate('thoughts')
+          .populate('posts')
           .populate('friends');
     
         return userData;
@@ -17,13 +17,13 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    thoughts: async (parent, { username }) => {
+    posts: async (parent, { username }) => {
       const params = username ? { username } : {}; // use ternary operator to check if username exists. if it does, we set params to an object with a username key set to that value. if it doesnt we simply return an empty object. 
-      return Thought.find(params).sort({ createdAt: -1 });
+      return Post.find(params).sort({ createdAt: -1 });
     },
 
-    thought: async (parent, { _id }) => {
-      return Thought.findOne({ _id });
+    post: async (parent, { _id }) => {
+      return Post.findOne({ _id });
     },
 
     // get all users
@@ -31,14 +31,14 @@ const resolvers = {
       return User.find()
         .select('-__v -password')
         .populate('friends')
-        .populate('thoughts');
+        .populate('posts');
     },
     // get a user by username
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
         .populate('friends')
-        .populate('thoughts');
+        .populate('posts');
     },
   },
   Mutation: {
@@ -49,31 +49,31 @@ const resolvers = {
       return { token, user };
     },
 
-    addThought: async (parent, args, context) => {
+    addPost: async (parent, args, context) => {
       if (context.user) {
-        const thought = await Thought.create({ ...args, username: context.user.username });
+        const post = await Post.create({ ...args, username: context.user.username });
     
         await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { thoughts: thought._id } },
+          { $push: { posts: post._id } },
           { new: true }
         );
     
-        return thought;
+        return post;
       }
     
       throw new AuthenticationError('You need to be logged in!');
     },
 // Some simple reaction 
-    addReaction: async (parent, { thoughtId, reactionBody }, context) => {
+    addComment: async (parent, { postId, commentBody }, context) => {
       if (context.user) {
-        const updatedThought = await Thought.findOneAndUpdate(
-          { _id: thoughtId },
-          { $push: { reactions: { reactionBody, username: context.user.username } } },
+        const updatedPost = await Post.findOneAndUpdate(
+          { _id: postId },
+          { $push: { comments: { commentBody, username: context.user.username } } },
           { new: true, runValidators: true }
         );
     
-        return updatedThought;
+        return updatedPost;
       }
     
       throw new AuthenticationError('You need to be logged in!');
