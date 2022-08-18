@@ -64,7 +64,7 @@ const resolvers = {
     
       throw new AuthenticationError('You need to be logged in!');
     },
-
+// Some simple reaction 
     addReaction: async (parent, { thoughtId, reactionBody }, context) => {
       if (context.user) {
         const updatedThought = await Thought.findOneAndUpdate(
@@ -78,7 +78,7 @@ const resolvers = {
     
       throw new AuthenticationError('You need to be logged in!');
     },
-
+// X
     addFriend: async (parent, { friendId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
