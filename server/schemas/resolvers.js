@@ -9,7 +9,7 @@ const resolvers = {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
           .populate('posts')
-          .populate('friends');
+          //.populate('friends');
     
         return userData;
       }
@@ -30,14 +30,14 @@ const resolvers = {
     users: async () => {
       return User.find()
         .select('-__v -password')
-        .populate('friends')
+        //.populate('friends')
         .populate('posts');
     },
     // get a user by username
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
-        .populate('friends')
+        //.populate('friends')
         .populate('posts');
     },
   },
@@ -78,20 +78,20 @@ const resolvers = {
     
       throw new AuthenticationError('You need to be logged in!');
     },
-// X
-    addFriend: async (parent, { friendId }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { friends: friendId } },
-          { new: true }
-        ).populate('friends');
+// // X
+//     addFriend: async (parent, { friendId }, context) => {
+//       if (context.user) {
+//         const updatedUser = await User.findOneAndUpdate(
+//           { _id: context.user._id },
+//           { $addToSet: { friends: friendId } },
+//           { new: true }
+//         ).populate('friends');
     
-        return updatedUser;
-      }
+//         return updatedUser;
+//       }
     
-      throw new AuthenticationError('You need to be logged in!');
-    },
+//       throw new AuthenticationError('You need to be logged in!');
+//     },
 
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
