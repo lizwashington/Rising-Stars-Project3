@@ -1,17 +1,19 @@
-import { useRef, useState, useEffect } from 'react';
-
+import React, { useRef, useState, useEffect } from 'react';
+import { useAuth } from '../../utils/auth';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
 const Login = () => {
     const userRef = useRef();
-    const emailRef = useRef();
     const errRef = useRef();
     const [user, setUser] = useState('');
-    const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
+    const auth = useAuth();
     const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(''); /*replace with router*/
+    const [success, setSuccess] = useState('');
+
+    
 
     useEffect(() => {
         userRef.current.focus();
@@ -19,16 +21,28 @@ const Login = () => {
 
     useEffect(() => {
         setErrMsg('');
-    }, [user, email, pwd])
+    }, [user, pwd])
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(user, email, pwd);
-        setUser('');
-        setEmail('');
-        setPwd('');
+ 
+    
+
+    const handleSubmit = async (event) => {
+        const handleLogin = () => {
+            auth.login(user)
+            Navigate('/')
+        }
+        event.preventDefault();
+        console.log(user, pwd);
         setSuccess(true);
+        //clears fields
+        setUser('');
+        setPwd('');
+                
     }
+
+
+    
+ 
 
     return (
         <>
@@ -37,7 +51,7 @@ const Login = () => {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href='#'>Go to Home</a>
+                        <a href='/'>Go to Home</a>
                     </p>
                 </section>
             ) : (
@@ -51,24 +65,15 @@ const Login = () => {
                             id="username" 
                             ref={userRef} 
                             autoComplete="off" 
-                            onChange={(e) => setUser(e.target.value)} 
+                            onChange={(event) => setUser(event.target.value)} 
                             value={user} 
-                            required />
-
-                        <label htmlFor='email'>Email:</label>
-                        <input 
-                            type="email"
-                            ref={emailRef}
-                            id="email" 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            value={email} 
                             required />
 
                         <label htmlFor='password'>Password:</label>
                         <input 
                             type="password" 
                             id="password" 
-                            onChange={(e) => setPwd(e.target.value)} 
+                            onChange={(event) => setPwd(event.target.value)} 
                             value={pwd} 
                             required />
                         <button>Sign In</button>
