@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from 'react';
 
 const Login = () => {
     const userRef = useRef();
+    const emailRef = useRef();
     const errRef = useRef();
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(user, pwd);
+        console.log(user, email, pwd);
         setUser('');
         setEmail('');
         setPwd('');
@@ -56,10 +57,11 @@ const Login = () => {
 
                         <label htmlFor='email'>Email:</label>
                         <input 
-                            type="email" 
+                            type="email"
+                            ref={emailRef}
                             id="email" 
                             onChange={(e) => setEmail(e.target.value)} 
-                            value={pwd} 
+                            value={email} 
                             required />
 
                         <label htmlFor='password'>Password:</label>
