@@ -1,17 +1,52 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Nav(props) {
+    const { 
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+        contactSelected,
+        setContactSelected } = props;
+
+
+
+
+    return (
+        <header className="flex-row px-1">
+            <h2>
+            <a data-testid="link" href="/">
+             
+            </a>
+           </h2>
+            <nav>
+            <ul className="flex-row">
+                <li className="mx-2">
+                    <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+                      About
+                    </a>
+                </li>
+                <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+                    <span onClick={() => setContactSelected(true)}>Contact</span>
+                </li>
+                {categories.map((category) => (
+                    <li
+                    className={`mx-1 ${
+                        currentCategory.name === category.name && !contactSelected && 'navActive'
+                        }`}
+                    key={category.name}
+                    >
+                      <span
+  
+                    >
+                     
+                    </span>
+                </li>
+            ))}
+                </ul>
+              </nav>
+        </header>
+    );
+}
+        
+export default Nav
