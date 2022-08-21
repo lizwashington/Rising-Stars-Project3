@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useAuth } from '../../utils/auth';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, NavLink } from 'react-router-dom';
 
 
 
@@ -80,9 +80,10 @@ const Login = () => {
                     </form>
                     <p>
                         Need an Account?<br />
-                        <span className='line'>
-                            {/*put router link here*/}
-                            <a href='#'>Sign Up</a>
+                        <span>
+                            <NavLink to="/Signup">
+                                Sign up
+                            </NavLink>
                         </span>
                     </p>
                 </section>
