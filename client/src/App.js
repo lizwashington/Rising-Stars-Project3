@@ -11,6 +11,7 @@ import AuthRoute from "./components/AuthRoute";
 // import { AuthProvider } from "./utils/auth";
 import Signup from "./components/Signup.js";
 
+
 //once the utils auth is set up, wrap below in <AuthProvider> so it can't be accessed unless auth
 
 function App() {
