@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Login from './components/Login';
 import Messaging from "./components/Messaging";
 import Homepage from './components/Homepage';
-import Signup from "./components/Signup.js";
+import Signup from "./components/Signup.js/index.js";
 
 
 import { setContext } from '@apollo/client/link/context';
