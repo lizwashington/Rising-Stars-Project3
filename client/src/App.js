@@ -44,7 +44,7 @@ function App() {
                 <Routes>
                   <Route path="/signup" element={<Signup/>} />
                   <Route path="/login"  element={<Login />} />
-                  <Route path="/" element={<Homepage />} />
+                  <Route path="" element={<Homepage />} />
                   <Route path="/Messaging" element={<Messaging />} />
                   <Route path="/post/:id" element={<SinglePost />} />
     
