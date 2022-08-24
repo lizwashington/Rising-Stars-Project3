@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+Grading Requirements
+Technical Acceptance Criteria: 25%
+Application uses React for the front end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
 
-## Available Scripts
+Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
 
-In the project directory, you can run:
+Application meets the minimum requirements of a PWA:
 
-### `npm start`
+Uses a web manifest
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Uses a service worker for offline functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Is installable.
 
-### `npm test`
+Application includes user authentication using JWT.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Concept 10%
+Application should originate from a unique and novel idea.
 
-### `npm run build`
+Your group should clearly and concisely articulate your project idea.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Deployment: 20%
+Application deployed at live URL on Heroku and loads with no errors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Application GitHub URL submitted.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Portfolio at live URL submitted, featuring project.
 
-### `npm run eject`
+Repository Quality: 10%
+Repository has a unique name.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Repository follows best practices for file structure and naming conventions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Repository contains multiple descriptive commit messages.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Repository contains a high-quality README file with description, screenshot, and link to deployed application.
 
-## Learn More
+Application Quality: 15%
+Application user experience is intuitive and easy to navigate.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Application user interface style is clean and polished.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Application is responsive.
 
-### Code Splitting
+Presentation 10%
+Your group should present using Google Slides, Powerpoint, or a similar presentation software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Every group member should speak during the presentation.
 
-### Analyzing the Bundle Size
+Your presentation should follow the Project Presentation Template (Links to an external site.).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Collaboration 10%
+There are no major disparities in the number of GitHub contributions among group members.
+Considerations
+CSS-in-JS
+Stripe payment platform
 
-### Making a Progressive Web App
+Deployed Application
+Heroku
+GitHub
+License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+Name	Role
+Keith Williams	- Front End
+Liz Washington	- Front End
+Erik Najera	- Back End
+Alex Scott	-
+Derik Cepeda	-
