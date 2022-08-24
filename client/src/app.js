@@ -1,12 +1,12 @@
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import React from "react";
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Messaging from "./components/Messaging";
 import Homepage from './components/Homepage';
 import Signup from "./components/Signup.js/index.js";
+import './styles/main.css';
 
 
 import { setContext } from '@apollo/client/link/context';
@@ -41,7 +41,6 @@ function App() {
       <ApolloProvider client={client}>
         <>
           <Router>
-            
             <Nav />
                 <Routes>
                   <Route path="/signup" element={<Signup/>} />

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
+
 
 const Nav = () => {
     const logout = event => {
@@ -10,7 +11,7 @@ const Nav = () => {
   
 
     return (
-        <header className="flex-row px-1">
+        <header className="flex-row">
 
             <nav>
             {Auth.loggedIn() ? (
