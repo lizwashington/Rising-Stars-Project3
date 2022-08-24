@@ -7,9 +7,6 @@ import Nav from './components/Nav';
 import Login from './components/Login';
 import Messaging from "./components/Messaging";
 import Homepage from './components/Homepage';
-import MyAccount from './components/MyAccount';
-import AuthRoute from "./components/AuthRoute";
-// import { AuthProvider } from "./utils/auth";
 import Signup from "./components/Signup.js";
 
 import { setContext } from '@apollo/client/link/context';
@@ -50,7 +47,6 @@ function App() {
                   <Route path="/dashboard"  element={<Dashboard />} />
                   <Route path="/" element={<Homepage />} />
                   <Route path="/Messaging" element={<Messaging />} />
-                  <Route path="/MyAccount" element={<MyAccount />} />
     
                 </Routes>
             

@@ -15,8 +15,8 @@ const Nav = () => {
             <nav>
             {Auth.loggedIn() ? (
             <>
-                <NavLink to='/Dashboard'>
-                    Dashboard
+                <NavLink to='/Feed'>
+                    Feed
                 </NavLink>
                 <NavLink to='/Messaging'>
                     Messaging
@@ -27,7 +27,6 @@ const Nav = () => {
                 <NavLink to='/'>
                     Homepage
                 </NavLink>
-              <NavLink to="/profile">Me</NavLink>
               <a href="/" onClick={logout}>
                 Logout
               </a>
