@@ -1,6 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './components/Nav/index.js',
+    './App.js',
+    './index.js',
+    './components/CommentForm/index.js',
+    './components/Feed/index.js',
+    './components/Homepage/index.js',
+    './components/Login/index.js',
+    './components/Messaging/index.js',
+    './components/PostForm/index.js',
+    './components/PostList/index.js',
+    './components/Signup.js/index.js',
+    './components/SinglePost/index.js',
+    './components/Users/index.js',
+    './pages/home.js',
+    './pages/login.js',
+    './pages/nomatch.js',
+    './pages/profile.js',
+    './pages/signup.js',
+    './pages/SinglePost.js'
+  ],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {

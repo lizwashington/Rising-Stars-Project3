@@ -11,7 +11,7 @@ const Nav = () => {
   
 
     return (
-        <header className="flex-row">
+        <header className="flex-row bg-green-300">
 
             <nav>
             {Auth.loggedIn() ? (
