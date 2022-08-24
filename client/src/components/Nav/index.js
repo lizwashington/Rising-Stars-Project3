@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Auth from '../../utils/auth'
 
 
 
@@ -11,7 +12,8 @@ const Nav = () => {
         <header className="flex-row px-1">
 
             <nav>
-
+             {Auth.loggedIn() ? (
+                <>
                 <NavLink to='/Dashboard'>
                     Dashboard
                 </NavLink>
@@ -24,7 +26,13 @@ const Nav = () => {
                 <NavLink to='/'>
                     Homepage
                 </NavLink>
-          
+                </>
+             ) : (
+                <>
+                <Link to="/Login">Login</Link>
+                <Link to="/Signup">Signup</Link>
+              </>
+             )}
             </nav>
         </header>
     );
