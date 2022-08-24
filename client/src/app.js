@@ -2,7 +2,6 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from './components/Dashboard';
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Messaging from "./components/Messaging";
@@ -11,6 +10,7 @@ import Signup from "./components/Signup.js";
 
 
 import { setContext } from '@apollo/client/link/context';
+import SinglePost from './components/SinglePost';
 
 const httpLink = createHttpLink({
   uri: '/graphql', // Uniform Resource Identifier
@@ -46,9 +46,9 @@ function App() {
                 <Routes>
                   <Route path="/signup" element={<Signup/>} />
                   <Route path="/login"  element={<Login />} />
-                  <Route path="/dashboard"  element={<Dashboard />} />
                   <Route path="/" element={<Homepage />} />
                   <Route path="/Messaging" element={<Messaging />} />
+                  <Route path="/post/:id" element={<SinglePost />} />
     
                 </Routes>
             
