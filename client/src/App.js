@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Login from './components/Login';
 import Messaging from "./components/Messaging";
 import Homepage from './components/Homepage';
-import Signup from "./components/Signup.js";
+import Signup from "./components/Signup.js/index.js";
 
 import { setContext } from '@apollo/client/link/context';
 import SinglePost from './components/SinglePost';
@@ -44,7 +44,7 @@ function App() {
                 <Routes>
                   <Route path="/signup" element={<Signup/>} />
                   <Route path="/login"  element={<Login />} />
-                  <Route path="/" element={<Homepage />} />
+                  <Route path="" element={<Homepage />} />
                   <Route path="/Messaging" element={<Messaging />} />
                   <Route path="/post/:id" element={<SinglePost />} />
     

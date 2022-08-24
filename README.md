@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Rising Star
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+|Table of Contents|
+|:---:|
+|[Description](#project-description)|
+|[Installation](#installation)|
+|[Grading Requirements](#grading-requirements)|
+|[Deployed App](#deployed-application)
+|[License](#license)|
+|[Contact](#contact)|
 
-## Available Scripts
+---
+## Project Description
+>An communication app that alows you to stay in contact with your kids daycare!  
 
-In the project directory, you can run:
 
-### `npm start`
+---
+## Installation
+>Fork or clone the repo and open the root file from the terminal. Run `npm i` to install dependencies. 
+---
+## Grading Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technical Acceptance Criteria: 25%
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Application uses React for the front end.
 
-### `npm test`
+* Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
 
-### `npm run build`
+* Application meets the minimum requirements of a PWA:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Uses a web manifest
+* Uses a service worker for offline functionality
+* Is installable.
+* Application includes user authentication using JWT
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Concept 10%
+* Application should originate from a unique and novel idea.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Your group should clearly and concisely articulate your project idea.
 
-### `npm run eject`
+### Deployment: 20%
+* Application deployed at live URL on Heroku and loads with no errors.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Application GitHub URL submitted.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Portfolio at live URL submitted, featuring project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Repository Quality: 10%
+* Repository has a unique name.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Repository follows best practices for file structure and naming conventions.
 
-## Learn More
+* Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Repository contains multiple descriptive commit messages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Repository contains a high-quality README file with description, screenshot, and link to deployed application.
 
-### Code Splitting
+### Application Quality: 15%
+* Application user experience is intuitive and easy to navigate.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Application user interface style is clean and polished.
 
-### Analyzing the Bundle Size
+* Application is responsive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Presentation 10%
+* Your group should present using Google Slides, Powerpoint, or a similar presentation software.
 
-### Making a Progressive Web App
+* Every group member should speak during the presentation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Your presentation should follow the Project Presentation Template (Links to an external site.).
 
-### Advanced Configuration
+### Collaboration 10%
+* There are no major disparities in the number of GitHub contributions among group members.
+---
+#### Considerations
+> CSS-in-JS\
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
+# Deployed Application
+* [Heroku]()
+* [GitHub](https://github.com/lizwashington/Rising-Stars-Project3.git)
+---
+# License
+MIT
+---
+# Contact
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Name             | Role          |
+| :---------------:|:-------------:|
+| Keith Williams   | -  Front End  |
+| Liz Washington   | -  Front End  |
+| Erik Najera      | -  Back End   |
+| Derik Cepeda     | -             |
+| Alex Scott       | -             |
