@@ -94,4 +94,4 @@ MIT
 | Liz Washington   | -  Front End  |
 | Erik Najera      | -  Back End   |
 | Derik Cepeda     | -             |
-| Alex Scott       | -             |
+| Alex Scott       | -  Back End   |
