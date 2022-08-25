@@ -11,7 +11,7 @@
 
 ---
 ## Project Description
->An communication app that alows you to stay in contact with your kids daycare! 
+>An communication app that alows you to stay in contact with your kids daycare!  
 
 
 ---
@@ -33,7 +33,7 @@
 * Uses a web manifest
 * Uses a service worker for offline functionality
 * Is installable.
-* Application includes user authentication using JWT.
+* Application includes user authentication using JWT
 
 ### Concept 10%
 * Application should originate from a unique and novel idea.
