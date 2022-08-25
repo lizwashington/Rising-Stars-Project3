@@ -40,3 +40,8 @@
 .link {
   list-style: none;
 }
+
+.nav {
+  align-content: space-between;
+  padding: 5 px;
+}
