@@ -12,7 +12,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "concurrently": "^7.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -42,5 +43,18 @@
   },
   "devDependencies": {
     "concurrently": "^7.3.0"
-  }
+  },
+  "description": "|Table of Contents| |:---:| |[Description](#project-description)| |[Installation](#installation)| |[Grading Requirements](#grading-requirements)| |[Deployed App](#deployed-application) |[License](#license)| |[Contact](#contact)|",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizwashington/Rising-Stars-Project3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizwashington/Rising-Stars-Project3/issues"
+  },
+  "homepage": "https://github.com/lizwashington/Rising-Stars-Project3#readme"
 }
