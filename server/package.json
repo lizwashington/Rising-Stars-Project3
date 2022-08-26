@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "watch": "nodemon",
     "seed": "node seeders/seeds.js"
   },
@@ -18,8 +18,7 @@
     "express": "^4.17.2",
     "faker": "^4.1.0",
     "graphql": "^16.2.0",
-    "mongoose": "^6.1.6",
-    "nodemon": "^2.0.3"
+    "mongoose": "^6.1.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
